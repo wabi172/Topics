@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>特別優惠</title>
+    <style>
+        .container-fluid {
+            padding: 0;
+            width: 100%;
+            height: auto;
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        h4 {
+            font-size: 22px;
+        }
+
+        h5 {
+            font-size: 18px;
+        }
+
+        h6 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        /* *{
+            border: 1px solid red;
+        } */
+        header {
+            padding-inline: 10px;
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .k-search {
+            display: flex;
+            justify-content: center;
+
+            form {
+                width: 700px;
+
+                input {
+                    border-radius: 100px;
+                }
+            }
+        }
+
+        .k-pages ul {
+            display: flex;
+            width: 100%;
+            height: 5rem;
+            gap: 50px;
+            padding-top: 30px;
+            padding-bottom: 1px;
+            align-items: center;
+
+            li {
+                cursor: pointer;
+
+                span {
+                    font-size: 14px;
+                }
+
+                &.active {
+                    border-bottom: 5px solid #333;
+                }
+            }
+        }
+
+        .k-icons {
+            height: 95px;
+
+            ul {
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                list-style: none;
+                gap: 25px;
+
+            }
+        }
+
+        .k-main {
+            display: flex;
+            width: auto;
+            height: 100vh;
+            /* background: url(./images/main.jpg) lightgray  no-repeat; */
+            background: url(./images/main.jpg) 0px -723.5px / 100% 251.836% no-repeat;
+            /* background-size:  cover; */
+            /* 背景縮放問題先保留 */
+            color: #fff;
+            justify-content: start;
+            align-items: center;
+
+            .content {
+                width: 533px;
+                height: 435px;
+
+                .title {
+                    display: flex;
+                    width: 100%;
+                    height: 50%;
+
+                    div {
+                        font-size: 56px;
+                    }
+
+                    span {
+                        font-size: 36px;
+                    }
+
+                    h6 {
+                        padding-top: 30%;
+                    }
+
+                    h1 {
+                        width: 60%;
+                        border-radius: 100px;
+                        border: 3px solid;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        font-size: 32px
+                    }
+
+                }
+            }
+        }
+
+        article {
+            width: 100%;
+            height: auto;
+            background: #f9f9f9;
+            padding-inline: 64px;
+
+            .k-title {
+                padding-top: 5rem;
+                padding-bottom: 2rem;
+
+                h1 {
+                    font-weight: bold;
+                }
+
+                span {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+
+            .row {
+                width: 100%;
+            }
+
+            .k-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 12rem;
+
+                .btn {
+                    border-radius: 100px;
+                    width: 15rem;
+                    height: 3rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        hr {
+            margin: 0;
+        }
+
+        footer {
+            width: 100%;
+            padding-inline: 64px;
+            padding-top: 1.5rem;
+
+            ul {
+                display: flex;
+                width: 100%;
+                height: auto;
+                gap: 50px;
+                padding-top: 30px;
+                padding-bottom: 1px;
+                align-items: start;
+
+                li {
+                    font-weight: bold;
+
+                    div {
+                        cursor: pointer;
+
+                    }
+
+                    :nth-child(1) {
+                        margin-top: 1.5rem;
+                    }
+
+                    :last-child {
+                        margin-bottom: 2rem;
+                    }
+
+                    div {
+                        margin-top: .8rem;
+                    }
+
+                    .email {
+                        cursor: default;
+                        width: 75%;
+
+                        .group {
+                            display: flex;
+                            align-items: start;
+                            height: 1.5rem;
+                        }
+                        input {
+                            margin: 0;
+                            width: 100%;
+                            border: none;
+                        }
+                    }
+
+                }
+
+            }
+            .mise{
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding-top: 1rem;
+                .btn{
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%);
+                    border-radius: 100px;
+                    padding-inline: 1rem;
+                    padding-block: .5rem;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <div>
+                <img src="./images/logo.jpg" alt="">
+            </div>
+            <div>
+                <div class="k-search">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 search-input" type="search" placeholder="搜尋商品、品牌、活動..."
+                            aria-label="Search" value="">
+                    </form>
+                </div>
+                <div class="k-pages">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <p class=" " aria-current="page" href="#">ELECTRIC GUITARS / <span>電吉他商品</span></p>
+                        </li>
+                        <li class="nav-item">
+                            <p class="" href="#">MUSIC FESTIVALS / <span>音樂活動</span></p>
+                        </li>
+                        <li class="nav-item">
+                            <p class="" href="#">RENT / <span>商品租借</span></p>
+                        </li>
+                        <li class="nav-item active">
+                            <p class=" " href="#">SPECIAL EVENTS / <span>特別優惠</span></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="k-icons">
+                <ul>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li><i class="fa-regular fa-user"></i></li>
+                    <li><i class="fa-solid fa-cart-shopping"></i></li>
+                </ul>
+            </div>
+        </header>
+        <main class="k-main">
+            <div class="content ms-5">
+                <div class="title flex-column">
+                    <div>SPECIAL OFFER</div>
+                    <span>聖誕季優惠活動 LES系列9折優惠</span>
+                </div>
+                <div class="title flex-column">
+                    <h1 class="btn btn-outline-light">立即加入會員</h1>
+                    <h6>活動期間:2024/12/01 - 2025/01/31</h6>
+                </div>
+            </div>
+        </main>
+        <article>
+            <div class="k-title">
+                <h1 class=" " aria-current="page" href="#">COUPONS / <span>會員優惠券專區</span></h1>
+            </div>
+            <div class="row row-cols-lg-4 g-3 coupons">
+                <div class="col">
+                    <img src="./images/Property 1=coupons,Property2=default.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="./images/Property 1=coupon-b,Property2=default.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="./images/Property 1=coupons,Property2=default.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="./images/Property 1=coupon-b,Property2=default.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="./images/Property 1=coupons,Property2=default.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="./images/Property 1=coupon-b,Property2=default.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="./images/Property 1=coupons,Property2=default.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="./images/Property 1=coupon-b,Property2=default.jpg" alt="">
+                </div>
+
+
+
+
+
+            </div>
+            <div class="k-btn">
+                <button class="btn btn-outline-dark">全部領取</button>
+            </div>
+        </article>
+        <hr>
+        <footer>
+            <div>
+                <ul class="nav justify-content-center d-flex">
+                    <li class="flex-fill">
+                        NEWSLETTER
+                        <div class="email">
+                            <div class="group">
+                                <input placeholder="請輸入email訂閱電子報" type="text">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+
+                            <hr>
+                        </div>
+                        <p>
+                            點擊"訂閱"即表示妮卻您以閱讀和理解<a href="#">隱私權政策</a>，並且同<br>意接收時事通訊及其他如政策中所述的行銷資訊。
+                        </p>
+
+                    </li>
+                    <li class="flex-fill">
+                        INFO
+                        <div>
+                            常見問題
+                        </div>
+                        <div>
+                            購物說明
+                        </div>
+                        <div>
+                            物流配送
+                        </div>
+                        <div>
+                            退貨流程
+                        </div>
+                    </li>
+                    <li class="flex-fill">
+                        COMPANY
+                        <div>
+                            關於我們
+                        </div>
+                        <div>
+                            品牌合作
+                        </div>
+                        <div>
+                            最新消息
+                        </div>
+                        <div>
+                            服務條款
+                        </div>
+                    </li>
+                    <li class="flex-fill">
+                        GET IN TOUCH
+                        <div>
+                            service@echora.com
+                        </div>
+                        <div>
+                            聯絡客戶服務
+                        </div>
+                        <div>
+                            165反詐騙諮詢專線
+                        </div>
+
+                    </li>
+                    <li class="flex-fill">
+                        ACCOUNT
+                        <div>
+                            我的帳戶
+                        </div>
+                        <div>
+                            訂單狀態
+                        </div>
+                        <div>
+                            退貨與換貨
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="mise">
+                <p >Copyright &copy; 2025 Echora Company</p>
+                <button class="btn btn-outline-dark" ><i class="fa-solid fa-location-dot"></i>  查找專門店</button>
+            </div>
+
+        </footer>
+    </div>
+
+
+
+
+    <script link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
