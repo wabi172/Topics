@@ -89,7 +89,6 @@
                 justify-content: center;
                 list-style: none;
                 gap: 25px;
-
             }
         }
 
@@ -105,21 +104,45 @@
             justify-content: start;
             align-items: center;
 
+            @media (max-width:900px) {
+                justify-content: center;
+                height: 80vh;
+
+            }
+
             .content {
-                width: 533px;
-                height: 435px;
+                /* width: 533px;
+                height: 435px; */
+                width: 33rem;
+                height: 27rem;
+
 
                 .title {
                     display: flex;
                     width: 100%;
                     height: 50%;
 
+                    @media (max-width:900px) {
+                        justify-content: center;
+                        align-items: center;
+                        height: auto;
+
+                      
+                    }
+
                     div {
                         font-size: 56px;
+                        @media (max-width:585px) {
+                            font-size: 48px;
+                        }
                     }
 
                     span {
                         font-size: 36px;
+
+                        @media (max-width:585px) {
+                            font-size: 28px;
+                        }
                     }
 
                     h6 {
@@ -242,7 +265,8 @@
                     align-items: start;
                     justify-items: center;
                     cursor: default;
-                    i{
+
+                    i {
                         cursor: pointer;
                     }
                 }
@@ -389,7 +413,7 @@
 
         <main class="k-main">
             <div class="content ms-5">
-                <div class="title flex-column">
+                <div class="title flex-column mb-2">
                     <div>SPECIAL OFFER</div>
                     <span>聖誕季優惠活動 LES系列9折優惠</span>
                 </div>
