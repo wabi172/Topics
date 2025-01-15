@@ -127,11 +127,12 @@
                         align-items: center;
                         height: auto;
 
-                      
+
                     }
 
                     div {
                         font-size: 56px;
+
                         @media (max-width:585px) {
                             font-size: 48px;
                         }
@@ -162,7 +163,7 @@
             }
         }
 
-        article {
+        .k-article {
             width: 100%;
             height: auto;
             background: #f9f9f9;
@@ -184,6 +185,40 @@
 
             .row {
                 width: 100%;
+
+                @media (max-width:1120px) {
+                    justify-content: center;
+                    .col:nth-child(-n +4){
+                            display: none;
+                        }
+                }
+                @media (max-width:1500px) {
+                        justify-content: center;
+                    }
+
+                .col {
+                    @media (max-width:1715px) {
+                        display: flex;
+                        justify-content: center;
+                        width: 30%;
+                    }
+                    @media (max-width:1500px) {
+                       
+                        width: 40%;
+                    }
+
+                    @media (max-width:1120px) {
+                      
+                        width: 50%;
+                        
+                    }
+                    @media (max-width:930px) {
+                       
+                        width: 100%;
+                        
+                    }
+                }
+
             }
 
             .k-btn {
@@ -423,11 +458,12 @@
                 </div>
             </div>
         </main>
-        <article>
+
+        <article class="k-article">
             <div class="k-title">
                 <h1 class=" " aria-current="page" href="#">COUPONS / <span>會員優惠券專區</span></h1>
             </div>
-            <div class="row row-cols-lg-4 g-3 coupons">
+            <div class="row row-cols-lg-4 row-cols-md-3 g-3 coupons">
                 <div class="col">
                     <img src="./images/Property 1=coupons,Property2=default.jpg" alt="">
                 </div>
